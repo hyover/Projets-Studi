@@ -7,15 +7,21 @@
   <meta content="Une association de développeur pas comme les autres ! Rejoignez-nous et développez au mieux vos projets ! " name="description">
   <title>Software Developpement</title>
 
+  
+
   <!-- Favicons -->
   <link href="src/favicon.png" rel="icon">
   <link href="src/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Boostrap CSS - CDN v5.1.3 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+
+  <!-- Bootstrap CSS ICON -->
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
   
   <!-- CSS Files -->
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
   <!-- Bootstrap JS - CDN v5.1.3-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" defer></script>
@@ -77,5 +83,69 @@
     </div>
   </main>
   <!-- End Introduction -->
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="container">
+
+      <div class="section-title">
+        <h3 class="text-center mb-3">Contact-nous !</h3>
+      </div>
+
+      <div class="row" data-aos="fade-in">
+        <div class="">
+          <img src="src/Software Solutions.png" alt="Software_solutions" class="img-fluid">
+        </div>
+        <div class="col-lg-5 d-flex align-items-stretch"> 
+          <div class="info">
+            <div class="address">
+              <i class="bi bi-person-plus-fill"></i>
+              <h4>Tu veux participez ?</h4>
+              <p>Inscris toi et rejoins-nous chaque mois pendant 2 jours sur notre site d'entraide !</p>
+        
+            </div>
+
+            <div class="email">
+              <i class="bi bi-question-lg"></i>
+              <h4>Une question ?</h4>
+              <p>Tu peux également poser tes questions via notre formulaire !</p>
+            </div>
+
+            <div class="phone">
+              <i class="bi bi-calendar4-week"></i>
+              <h4>Un week-end sur mesure</h4>
+              <p>Plusieurs partenaire d'hébergement sont proposés sur place ou en reservation pour un hebergement collectif. Pendant ces 2 jours snack et buvette sont également disponible</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="name">Votre pseudo</label>
+                <input type="text" name="name" class="form-control" id="name" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="name">Votre Email</label>
+                <input type="email" class="form-control" name="email" id="email" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="name">Sujet</label>
+              <input type="text" class="form-control" name="subject" id="subject" required>
+            </div>
+            <div class="form-group">
+              <label for="name">Message</label>
+              <textarea class="form-control" name="message" rows="10" required></textarea>
+            </div>
+            <div class="my-3">
+              <div class="loading">Chargement</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Votre message à était envoyé. Merci !</div>
+            </div>
+            <div class="text-center"><button type="submit">Envoyer</button>
+  </section>
+  <!-- End Contact -->
 </body>
 </html>
