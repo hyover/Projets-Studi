@@ -133,7 +133,11 @@
             </div>
             <div class="form-group">
               <label for="name">Sujet</label>
-              <input type="text" class="form-control" name="subject" id="subject" required>
+              <select name="subject" id="subject" required class="form-control">
+                <option value="inscription">Je souhaite m'inscrire au prochain événement</option>
+                <option value="informations_complementaire">Informations complémentaire sur l'événement</option>
+                <option value="autre_question">Autre question</option>
+              </select>
             </div>
             <div class="form-group">
               <label for="name">Message</label>
