@@ -26,8 +26,62 @@
 </head>
 
 <body>
-  <div class="container">
-    NEW GAME
+  <div class="container py-5 my-5 border-2 rounded shadow-lg">
+
+      <div class="row pb-5 justify-content-center">
+        <div class="col-3 text-center">
+          <div onclick="newGame()" type="button" class="btn d-flex justify-content-center">
+            <i class="bi bi-plus-circle" style="color: #e66262;"></i>
+            <p class="ps-2">NEW GAME</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row py-5">
+        <div class="col-5 text-center">
+          <div>
+            <h1>PLAYER 1</h1>
+            <h2 id="global-player1">43</h2>
+          </div>
+        </div>
+        <div class="col-2 text-center">
+          <img src="src/dice-01.svg" id="die">
+        </div>
+        <div class="col-5 text-center">
+          <div>
+            <h1>PLAYER 2</h1>
+            <h2 id="global-player2">72</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row py-5">
+        <div class="col-5 text-center d-flex justify-content-center">
+          <div class="round-box py-3 px-5 rounded">
+            <h3>CURRENT</h3>
+            <h4 id="round-player1">11</h4>
+          </div>
+        </div>
+
+        <div class="col-2 text-center">
+          <div onclick="roll()" type="button" class="btn d-flex justify-content-center">
+            <i class="bi bi-arrow-repeat" style="color: #e66262;"></i>
+            <p class="ps-2">ROLL DICE</p>
+          </div>
+          <div onclick="hold()" class="btn d-flex justify-content-center">
+            <i class="bi bi-arrow-down-square" style="color: #e66262;"></i>
+            <p class="ps-2">HOLD</p>
+          </div>
+        </div>
+
+        <div class="col-5 text-center d-flex justify-content-center">
+          <div class="round-box py-3 px-5 rounded">
+            <h3>CURRENT</h3>
+            <h4 id="round-player2">0</h4>
+          </div>
+        </div>
+      </div>
+
   </div>
 </body>
 </html>

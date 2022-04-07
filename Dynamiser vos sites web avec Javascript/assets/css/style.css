@@ -1,6 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
 body {
   font-family: 'Lato', sans-serif;
-  color: black; }
+  font-weight: 600;
+  color: #5F5F5F;
+  background-color: #fff;
+  background: url("../../src/background.jpg") top center no-repeat;
+  background-size: cover;
+  font-size: 1.1em; }
+
+.container {
+  height: 100%;
+  background: linear-gradient(90deg, #F6F7F7 50%, #FFF 50%); }
+
+h2 {
+  font-size: 5em;
+  color: #e66262; }
+
+h3 {
+  font-size: 1em;
+  font-weight: 600; }
+
+.round-box {
+  background-color: #e66262; }
+
+/*--------------------------------------------------------------
+# Dice
+--------------------------------------------------------------*/
+.shake {
+  animation: shake 0.5s infinite; }
+
+@keyframes shake {
+  0% {
+    transform: rotate(8deg); }
+  50% {
+    transform: rotate(-8deg); }
+  100% {
+    transform: rotate(8deg); } }
 
 /*# sourceMappingURL=style.css.map */
