@@ -5,7 +5,7 @@ var globalScore, roundScore, activePlayer, gamePlaying
 function newGame() {
 
     globalScore = [0, 0]
-    activePlayer = 1
+    activePlayer = 0
     roundScore = 0
     gamePlaying = true
     
@@ -13,14 +13,14 @@ function newGame() {
     let player1 = prompt("Nom du joueur 1");
     let player2 = prompt("Nom du joueur 2");
 
-    document.getElementById("player-1").innerHTML = player1;
-    document.getElementById("player-2").innerHTML = player2;
+    document.getElementById("player-0").innerHTML = player1;
+    document.getElementById("player-1").innerHTML = player2;
 
     // Reset stats
+    document.getElementById("global-0").innerHTML = "0";
     document.getElementById("global-1").innerHTML = "0";
-    document.getElementById("global-2").innerHTML = "0";
+    document.getElementById("round-0").innerHTML = "0";
     document.getElementById("round-1").innerHTML = "0";
-    document.getElementById("round-2").innerHTML = "0";
 }
 
 
@@ -55,7 +55,7 @@ function roll(){
         document.querySelector("#die").setAttribute("src", images[dieValue])
 
         //3. Update the round score IF the rolled number was NOT a 1
-        if (dieValue !== 1) {
+        if (dieValue !== 0) {
             //Add score
             roundScore += dieValue + 1;
             document.querySelector('#round-' + activePlayer).textContent = roundScore
@@ -79,8 +79,10 @@ function hold() {
 
         // Check if player won the game
         if (globalScore[activePlayer] >= 100) {
-            document.querySelector('#player-' + activePlayer).textContent = 'Winner!';
-            document.querySelector('.die').style.display = 'none';
+            document.querySelector('#player-' + activePlayer).textContent = 'GAGNANT!';
+            dice.forEach(function(die){
+                die.classList.add("shake")
+            });
             gamePlaying = false;
         } else {
             //Next player
@@ -90,4 +92,12 @@ function hold() {
 }
 
 /* NEXT PLAYER */
-/* END GAME */
+
+function nextPlayer() {
+    //Next player
+    activePlayer === 1 ? activePlayer = 0 : activePlayer = 1;
+    roundScore = 0;
+
+    document.getElementById('round-0').textContent = '0';
+    document.getElementById('round-1').textContent = '0'
+}

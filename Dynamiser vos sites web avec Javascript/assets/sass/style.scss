@@ -52,6 +52,21 @@ h3 {
 }
 
 /*--------------------------------------------------------------
-# Player
+# Winner
 --------------------------------------------------------------*/
+
+.shake-winner{
+  animation: shake 0.5s infinite;
+}
+@keyframes shake-winner{
+  0% {
+      transform: rotate(8deg);
+  }
+  50% {
+      transform: rotate(-45deg);
+  }
+  100% {
+      transform: rotate(90deg);
+  }
+}
     
