@@ -69,4 +69,25 @@ function roll(){
 
 /* HOLD BUTTON */
 
+function hold() {
+    if (gamePlaying) {
+        // Add ROUND score in current box to GLOBAL score
+        globalScore[activePlayer] += roundScore;
+
+        // Update the scores
+        document.getElementById('global-' + activePlayer).textContent = globalScore[activePlayer];
+
+        // Check if player won the game
+        if (globalScore[activePlayer] >= 100) {
+            document.querySelector('#player-' + activePlayer).textContent = 'Winner!';
+            document.querySelector('.die').style.display = 'none';
+            gamePlaying = false;
+        } else {
+            //Next player
+            nextPlayer();
+        }
+    }
+}
+
+/* NEXT PLAYER */
 /* END GAME */
