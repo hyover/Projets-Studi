@@ -28,16 +28,22 @@
 <body>
   <div class="container py-5 my-5 border-2 rounded shadow-lg">
 
+      <!-- First line with icon player active and button new game -->
       <div class="row pb-5 justify-content-center">
+        <div id="active-0" class="col-4 text-center"></div>
+        
         <div class="col-3 text-center">
           <div onclick="newGame()" type="button" class="btn d-flex justify-content-center">
             <i class="bi bi-plus-circle" style="color: #e66262;"></i>
             <p class="ps-2">NEW GAME</p>
           </div>
         </div>
+
+        <div id="active-1" class="col-4 text-center"></div>
       </div>
 
-      <div class="row py-5">
+      <!-- Second line with players names, global score players and dice -->
+      <div class="row pb-5">
         <div class="col-5 text-center">
           <div>
             <h1 id="player-0">PLAYER 1</h1>
@@ -55,6 +61,7 @@
         </div>
       </div>
 
+      <!-- Last line with current box of players and button roll dice and button hold -->
       <div class="row py-5">
         <div class="col-5 text-center d-flex justify-content-center">
           <div class="round-box py-3 px-5 rounded">
