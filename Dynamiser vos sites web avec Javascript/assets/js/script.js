@@ -31,12 +31,13 @@ function newGame() {
     document.getElementById("round-0").innerHTML = "0"
     document.getElementById("round-1").innerHTML = "0"
     
-    dice.forEach(function(die){
+    dice.forEach((die) => {
         die.classList.remove("shake-winner")
     })
 
     // Add player active
     document.getElementById("active-0").classList.add("player-active")
+    document.getElementById("active-1").classList.remove("player-active")
 }
 
 
@@ -45,12 +46,12 @@ function newGame() {
 function roll(){
     if (gamePlaying) {
         // 1. Shake Dice
-        dice.forEach(function(die){
+        dice.forEach((die) => {
             die.classList.add("shake")
         })
         
-        setTimeout(function(){
-            dice.forEach(function(die){
+        setTimeout(() => {
+            dice.forEach((die) => {
                 die.classList.remove("shake")
             })
         },
@@ -62,7 +63,7 @@ function roll(){
         document.querySelector("#die").setAttribute("src", images[dieValue])
 
         //3. Update the round score IF the rolled number was NOT a 1
-        if (dieValue !== 0) {
+        if (dieValue !== 0) {// Your code goes here
             //Add score
             roundScore += dieValue + 1
             document.querySelector('#round-' + activePlayer).textContent = roundScore
@@ -87,7 +88,7 @@ function hold() {
         // Check if player won the game
         if (globalScore[activePlayer] >= 100) {
             document.querySelector('#player-' + activePlayer).textContent = 'GAGNANT!'
-            dice.forEach(function(die){
+            dice.forEach((die) => {
                 die.classList.add("shake-winner")
             })
             gamePlaying = false

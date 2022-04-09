@@ -7,7 +7,7 @@ body {
   font-weight: 600;
   color: #5F5F5F;
   background-color: #fff;
-  background: url("../../src/background.jpg") top center no-repeat;
+  background: url("../../images/background.jpg") top center no-repeat;
   background-size: cover;
   font-size: 1.1em; }
 
@@ -32,9 +32,7 @@ h3 {
 .player-active::before {
   content: "\261F";
   font-size: 3rem;
-  color: #e66262;
-  margin-bottom: 0;
-  padding-bottom: 0; }
+  color: #e66262; }
 
 /*--------------------------------------------------------------
 # Dice
